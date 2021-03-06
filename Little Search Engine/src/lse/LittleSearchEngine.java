@@ -112,40 +112,6 @@ public class LittleSearchEngine {
 
         
     
-    //////////////////////////////-pre-code-//////////////////////////////////////////////////
-    
-    //        HashMap<String,Occurrence> points = new HashMap<String,Occurrence>(10000, 2.0f);
-//        Scanner reader = new Scanner (new File(docFile));
-//        boolean isNull = false;
-//        
-//        while (reader.hasNext() == true) { //while not at the end
-//            isNull = false;
-//            String currword = reader.next(); //returns the next string token 
-//            String isKey = getKeyword(currword);//checks if it is a keyword
-//            
-//                if (isKey == null) {
-//                    isNull = true;
-//                }
-//        
-//                if (isNull == true) { //its not a keyword
-//                    continue;
-//                }
-//                
-//                else if (isNull == false) { //its a keyword
-//                    Occurrence pp = points.get(isKey); //is it in the table already?
-//                    if(pp != null){ //if its in the tree up the frequency at that point
-//                        pp.frequency++;
-//                    }
-//                    else {
-//                        Occurrence s = new Occurrence (docFile, 1);
-//                        points.put(isKey, s); //put it in with frequency of 1
-//                    }
-//                }
-//    }
-//        reader.close(); //make sure close
-//        return points;
-//    }
-    
     /**
      * Merges the keywords for a single document into the master keywordsIndex
      * hash table. For each keyword, its Occurrence in the current document
