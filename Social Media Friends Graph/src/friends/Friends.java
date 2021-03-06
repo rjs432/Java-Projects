@@ -44,7 +44,7 @@ public class Friends {
 					vA[t] = null;
 				}//ends for
 				
-			Queue<Person> que = new Queue<Person>(); //Queue for BFS//might need persons type
+			Queue<Person> que = new Queue<Person>(); //Queue for BFS
 			
 			
 			Person h = null;
@@ -61,9 +61,9 @@ public class Friends {
 			que.enqueue(h); //enqs the p1
 			Person point = null;
 	while (que.size() != 0) {//BFS//////////
-			point =  que.dequeue();//dequeues first thing -dequeued part of bfs
+			point =  que.dequeue();//dequeues first thing 
 			int inde = g.map.get(point.name); //sets the int value location in the map - 
-			ved[inde] = true; //says we saw that index -mark part of bfs
+			ved[inde] = true; //says we saw that index
 			Friend nextp = point.first;
 			boolean hg = nChec(null, nextp, null, "f");
 				//if (hg = false) {
@@ -126,10 +126,7 @@ public class Friends {
 							}
 						nextp = nextp.next;
 					}
-			///}
-//				else if (hg = true) {
-//					return null;
-//				}
+
 					
 
 				}//ends 1st while
@@ -289,7 +286,7 @@ public class Friends {
 	
 	
 	
-	private static ArrayList<String> dfspt1 ( Person person, String college, ArrayList<String> addList,boolean[] ved, int ind, Graph g){ //simple DFS based off class version
+	private static ArrayList<String> dfspt1 ( Person person, String college, ArrayList<String> addList,boolean[] ved, int ind, Graph g){ //simple DFS 
 		boolean yu = nChec(person, null, null, "p");
 		if (yu == true) {
 			return null;
@@ -328,10 +325,7 @@ public class Friends {
 			
 			curr = curr.next;
 		
-//			
-//
-//			}
-			//curr = curr.next;
+
 		}
 			}
 		return addList;
