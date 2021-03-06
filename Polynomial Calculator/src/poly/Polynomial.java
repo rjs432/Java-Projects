@@ -96,7 +96,7 @@ public class Polynomial {
                     tail = adding; //set tail to the new node bc that is the back
                     addedList = adding; //set the new node to added list 
                 } else {
-                        tail.next = adding; // this links newi to the ll
+                        tail.next = adding; // this links newito the ll
                         tail = adding; // this points tail to newi
                     
                 }
@@ -241,8 +241,7 @@ public class Polynomial {
              ptr=ptr.next;
         }
             
-        // FOLLOWING LINE IS A PLACEHOLDER TO MAKE THIS METHOD COMPILE
-        // CHANGE IT AS NEEDED FOR YOUR IMPLEMENTATION
+
         return eval;
     }
     
