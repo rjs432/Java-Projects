@@ -7,12 +7,7 @@ import java.util.regex.*;
 import structures.Stack;
 
 public class Expression {
-    //gives us a test file Etest 1
-    //we have a space in betweeen and variable and value
-    // space seperates the values
-    //u also have arrays that have name size and value (index,value) looks like A= [0,0,3,0,5] integers default to 0 just say the nums
-    //method runs through make variable list 
-    // we have a variable object and an array object
+
     
     public static String delims = " \t*+-/()[]";
             
@@ -27,20 +22,7 @@ public class Expression {
      * @param vars The variables array list - already created by the caller
      * @param arrays The arrays array list - already created by the caller
      */
-    //each index of the vars has a variable object
-    //each index of the arrays has a array object
-    //we have a string and we are sorting it into one of vars or arrays - use regx
-    //variable goes into the array list of variables 
-    // array goes into the arraylist of arrays 
-    // can not simply loop through char by char - includes spaces in this case
-    //can use tokenizer, string.split or regx - recommend string.split or reg
-    // want to split so you can get each of the desired chars 
-    // string. slit split on one delimiter. it will split it at the ats
-    //array is triggered by a name (any letter or word) followed by bracket so u add to arrays list else add to vars if open bracket add to ararray list
-    // array name is not numbers 
-    //vars is followed by space so add to that list - can only be letters no numebers 
-    //need to figure out how to split one whole string into vars and arrays
-    //m.find - when not true u R DONE
+ 
     //then do cases 
     public static void 
     makeVariableLists(String expr, ArrayList<Variable> vars, ArrayList<Array> arrays) {
@@ -71,13 +53,12 @@ public class Expression {
                         arrays.add(ar); 
                         name = "";
                     } // varsa + ...
-                    else if (expr.charAt(i+1) != ' ' && Character.isLetter(expr.charAt(i+1))) { //else its a long var so add to the long string till space //will this catch the array too
-                        continue; 
+                    else if (expr.charAt(i+1) != ' ' && Character.isLetter(expr.charAt(i+1))) {
 
 
                     } 
                     // w]
-                    else if (expr.charAt(i+1) != ' ' && !Character.isLetter(expr.charAt(i+1))) { //else its a long var so add to the long string till space //will this catch the array too
+                    else if (expr.charAt(i+1) != ' ' && !Character.isLetter(expr.charAt(i+1))) { 
                         //System.out.println("variable is: " + name); 
                         Variable v = new Variable (name);
                         vars.add(v); 
@@ -149,26 +130,7 @@ public class Expression {
      * @param arrays The arrays array list, with values for all array items
      * @return Result of evaluation
      */
-    // takes in the string of the expression and the vars and the arrays 
-    // if a is 3 b is 2 A IS OF LENGTH 5 and has 2 0 and 3 and 0 at 4 and a 5
-    // a[4] is 5 
-    //solve mathamatically 
-    // u have to use 2 stacks to create this you have one for operands, variables and arrays and one for opperators 
-    // array simples to a number at that index
-    // left to right
-    //loop through till length if space - continue -one that checks if its a var than adds that to stack- one that checks if array then adds that to stack
-    //add the array whith the whole inside
-    //than after all that pop the first numbers item and solve
-    // recurse by sending in what is in the brackts to be solved
-    //in your recursion recall the evaluate method on it to return the sum
-    //alternate the pops to solve and pop all into integers if its a plus add them if minus u subtract 
-    //the top one in the stack goes to right side of the equation with the op in middle than the value under in stack
-    //pop out to a int variable 
-    //stop the stack pushing when stack has 2 in it unless the next one after is a multiplication or division than push one mor and solve peak the next stack to see if it is an op with lower prec before addign thhe next go through the whole thing to check if has higher precident 
-    //after pop and solve than push in new value 
-    //USE FLOATS NOT INTS
-    
-    //pass in to where the end bracket is to solve -use regx to remove the spaces but include ops and everything before u state anything -if its a leter and the next is a letter continue 
+
     public static float 
     evaluate(String expr, ArrayList<Variable> vars, ArrayList<Array> arrays) {
         Stack<Float> vAndA = new Stack<Float>(); //stack that holds the numbers variables and arrays
@@ -254,11 +216,11 @@ public class Expression {
                         valuesInputed = valuesInputed + Integer.toString(namedata1) + " "; 
                         name = "";
                     } // varsa + ...
-                    else if (expr.charAt(i+1) != ' ' && Character.isLetter(expr.charAt(i+1))) { //else its a long var so add to the long string till space //will this catch the array too
+                    else if (expr.charAt(i+1) != ' ' && Character.isLetter(expr.charAt(i+1))) { 
                         continue;  
                     } 
                     // w] -> variable
-                    else if (expr.charAt(i+1) != ' ' && !Character.isLetter(expr.charAt(i+1))) { //else its a long var so add to the long string till space //will this catch the array too
+                    else if (expr.charAt(i+1) != ' ' && !Character.isLetter(expr.charAt(i+1))) { 
                         //System.out.println("variable is: " + name); 
                         for (int j =0; j<vars.size(); j++) { //travers the vars to find its match
                             if (vars.get(j).name.equals(name)) { //if the index in the vars equals the character //was previous name in the .equals
