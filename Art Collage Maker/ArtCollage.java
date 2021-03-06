@@ -109,7 +109,7 @@ public class ArtCollage {
 
         return original;
 
-    // WRITE YOUR CODE HERE
+ 
     }
 
     /*
@@ -121,7 +121,7 @@ public class ArtCollage {
 
         return collage;
 
-    // // WRITE YOUR CODE HERE
+  
    }
     
  //    /*
@@ -168,64 +168,7 @@ public class ArtCollage {
             }
         }
     }
-    //     int width = collageDimension * tileDimension; //this set the width to be the collageDimension X collageDimension of original
-    //     int height = collageDimension * tileDimension; //this sets the height of original
-
-    //     //Picture newimage = new Picture(collageDimension * tileDimension, collageDimension * tileDimension); //creates a new image that is the same w/h of the original
-    //     Picture newimage = this.collage;
-    //     Picture inputimage = new Picture(filename); // takes the image from file name and sets it to input image
-        
-    //     // scale filename image 
-    //     int w = this.tileDimension * this.collageDimension; //takes
-    //     int h = this.tileDimension * this.collageDimension; 
-    //     Picture addedimage = new Picture(h, w);
-    //      for (int col = 0; col < width; col++){
-    //         for (int row = 0; row < height; row++){
-    //             int scol = (col *inputimage.width()) / w; //inputimage.height()()
-    //             int srow = (row * inputimage.height()) / h; //inputimage.height()
-    //             Color color = inputimage.get(scol, srow);
-    //             addedimage.set(col, row, color);
-    //         }
-    //     }    
-            
-    //     // now let's replace the image 
-    //     for (int imagew = 0; imagew < collageDimension * tileDimension; imagew++){
-    //         for (int imageh = 0; imageh < collageDimension * tileDimension; imageh++){
-    //             for (int i = 0; i < collageDimension; i++){
-    //                 for (int j = 0; j < collageDimension; j++){
-
-    //                         boolean topleft = (((i * tileDimension*collageDimension) + imagew) /collageDimension) >= collageRow * tileDimension;
-    //                         boolean topright = (((j * tileDimension*collageDimension) + imageh) /collageDimension ) >= collageCol * tileDimension;
-    //                         boolean bottomleft = (((i * tileDimension*collageDimension) + imagew) /collageDimension )<= tileDimension + (collageRow * tileDimension);
-    //                         boolean bottomright = (((j * tileDimension*collageDimension) + imageh) /collageDimension) <= tileDimension + (collageCol * tileDimension);
-
-    //                         if ((topleft && topright && bottomright && bottomleft) == true) {
-    //                            // System.out.println(" topleft is " + toplefti + " toprighti his " + toprighti + " botleft is " + bottomlefti + " botright is " + bottomrighti); 
-
-
-    //                             int scalwt = ((i * tileDimension*collageDimension ) + imagew) / collageDimension ;
-    //                             int scalht = ((j * tileDimension*collageDimension ) + imageh) / collageDimension ;
-
-    //                             int color_scalew = (imagew * this.original.width()) / width; 
-    //                             int color_scaleh = (imageh * this.original.height()) / height;  
-
-    //                             Color color = addedimage.get(color_scaleh, color_scalew);
-    //                             newimage.set(scalht, scalwt, color);
-    //                            // System.out.println(" image w is " + imagew + " image his " + imageh + " scalewt is " + scalwt + " scaleht is " + scalht); 
- 
-
-    //                         } 
-    //                 }
-    //             }
-    //         }
-    //     }  
-        
-    //    this.collage = newimage; //this.
-    //    //showCollagePicture(); 
-    // }
-
-    // WRITE YOUR CODE HERE
-    
+   
     
     /*
      * Makes a collage of tiles from original Picture
@@ -234,13 +177,7 @@ public class ArtCollage {
      */
 
     public void makeCollage () {
-        //int width = collageDimension * tileDimension;
-        //int height = collageDimension * tileDimension; 
-        // Picture newimage = new Picture(collageDimension * tileDimension * collageDimension, collageDimension * tileDimension * collageDimension); 
-       // Picture newimage = new Picture(collageDimension * tileDimension, collageDimension * tileDimension); 
-        //this.original = this.collage; 
-        // for (int imagew = 0; imagew < tileDimension * collageDimension; imagew++){
-        //     for (int imageh = 0; imageh < tileDimension * collageDimension; imageh++){
+      
         
         for (int i = 0; i < collageDimension; i++){
             for (int j = 0; j < collageDimension; j++){
@@ -252,24 +189,12 @@ public class ArtCollage {
                                 collage.set(col, row, color);
                             }
                         }
-                        // int scalwt = ((i * tileDimension*collageDimension) + imagew) / collageDimension;
-                        // int scalht = ((j * tileDimension*collageDimension) + imageh) / collageDimension;
-
-                        // // int color_scalew = (imagew * this.original.width()) / width; 
-                        // // int color_scaleh = (imageh * this.original.height()) / height; 
-                        // int color_scalew = (imagew * this.original.width()) / width; 
-                        // int color_scaleh = (imageh * this.original.height()) / height; 
-
-                        // Color color = this.original.get(color_scaleh, color_scalew);
-                        // newimage.set(scalht, scalwt, color);
-                        // //newimage.set(imageh, imagew, color);
-                        //System.out.println(" image w is " + imagew + " image his " + imageh + " scalewt is " + scalwt + " scaleht is " + scalht); 
+               
                     }
                 }
             
         }
-        // this.collage = newimage; 
-        // showCollagePicture();
+    
     
     
  //     * Colorizes the tile at (collageCol, collageRow) with component 
@@ -306,87 +231,7 @@ public class ArtCollage {
       }
       } 
                         
-                              //    int width = collageDimension * tileDimension;
-      //   int height = collageDimension * tileDimension; 
-
-      //   //Picture newimage = new Picture(collageDimension * tileDimension, collageDimension * tileDimension);  
-      //   Picture newimage = this.collage;
-      //   Picture inputimage = new Picture(this.original);
-      //   // scale filename image 
-      //   int w = this.tileDimension * this.collageDimension;
-      //   int h = this.tileDimension * this.collageDimension; 
-      //   Picture addedimage = new Picture(h, w);
-      //    for (int col = 0; col < width; col++){
-      //       for (int row = 0; row < height; row++){
-      //           int scol = (col * inputimage.width()) / w;
-      //           int srow = (row * inputimage.height()) / h;
-      //           Color color = inputimage.get(scol, srow);
-
-      //            if (component.equals("red")){//
-      //               int r = color.getRed();//
-      //               addedimage.set(col, row, new Color(r, 0, 0));//
-      //               }
-      //           else if (component.equals("green")){
-      //               int g = color.getGreen();
-      //               addedimage.set(col, row, new Color(0, g, 0));
-      //           }
-      //           else if (component.equals("blue")){
-      //            int b = color.getBlue();
-      //            addedimage.set(col, row, new Color(0, 0, b));
-      //           }
-      //          else{
-      //           addedimage.set(col, row, color);
-      //       }
-      //    } 
-      // }   
-            
-    //     // now let's replace the image 
-    //     for (int imagew = 0; imagew < collageDimension * tileDimension; imagew++){
-    //         for (int imageh = 0; imageh < collageDimension * tileDimension; imageh++){
-    //             for (int i = 0; i < collageDimension; i++){
-    //                 for (int j = 0; j < collageDimension; j++){
-    //                          boolean topleft = (((i * tileDimension*collageDimension) + imagew) /collageDimension) >= collageRow * tileDimension;
-    //                         boolean topright = (((j * tileDimension*collageDimension) + imageh) /collageDimension ) >= collageCol * tileDimension;
-    //                         boolean bottomleft = (((i * tileDimension*collageDimension) + imagew) /collageDimension )<= tileDimension + (collageRow * tileDimension);
-    //                         boolean bottomright = (((j * tileDimension*collageDimension) + imageh) /collageDimension) <= tileDimension + (collageCol * tileDimension);
-
-    //                         if ((topleft && topright && bottomright && bottomleft) == true) {
-    //                             //System.out.println(" topleft is " + toplefti + " toprighti his " + toprighti + " botleft is " + bottomlefti + " botright is " + bottomrighti); 
-
-
-    //                             int scalwt = ((i * tileDimension*collageDimension) + imagew) / collageDimension;
-    //                             int scalht = ((j * tileDimension*collageDimension) + imageh) / collageDimension;
-
-    //                             int color_scalew = (imagew * this.original.width()) / width; 
-    //                             int color_scaleh = (imageh * this.original.height()) / height;  
-
-    //                             Color color = addedimage.get(color_scaleh, color_scalew);
-    //                             newimage.set(scalht, scalwt, color);
-    //                             //System.out.println(" image w is " + imagew + " image his " + imageh + " scalewt is " + scalwt + " scaleht is " + scalht); 
- 
-
-                            
-    //                         }
-    //                 }
-    //             }
-    //         }
-    //     }  
-    //     this.collage = newimage; 
-    //     showCollagePicture(); 
-    // }
-        // now let's replace the image 
-       
-       
-
-    // // WRITE YOUR CODE HERE
-    //}
-
- //    /*
- //     * Greyscale tile at (collageCol, collageRow)
- //     * (see Week 9 slides, the code for luminance is at the book's website)
- //     *
- //     * @param collageCol tile column
- //     * @param collageRow tile row
+                         
     
     public void greyscaleTile (int collageCol, int collageRow) {
         for (int i = 0; i < collageDimension; i++){
@@ -406,130 +251,7 @@ public class ArtCollage {
         }
     }
 
- //        int width = collageDimension * tileDimension;
- //        int height = collageDimension * tileDimension; 
 
- //        //Picture newimage = new Picture(collageDimension * tileDimension, collageDimension * tileDimension); 
- //        Picture newimage = this.collage; 
- //        Picture inputimage = new Picture(this.original); 
-        
- //        // scale filename image 
- //        int w = this.tileDimension * this.collageDimension;
- //        int h = this.tileDimension * this.collageDimension; 
- //        Picture addedimage = new Picture(h, w);
- //         for (int col = 0; col < width; col++){ //width
- //            for (int row = 0; row < height; row++){ //height
- //                int scol = (col * inputimage.width()) / w;
- //                int srow = (row * inputimage.height()) / h;
- //                Color color = inputimage.get(scol, srow);
- //                Color gray = Luminance.toGray(color);
- //                addedimage.set(col, row, gray);
-
-                
- //            }
-
- //        }
-            
-            
- //        // now let's replace the image 
- //        for (int imagew = 0; imagew < collageDimension * tileDimension; imagew++){ //traverses through the original images width
- //            for (int imageh = 0; imageh < collageDimension * tileDimension; imageh++){ //traverses through the original images height
- //                for (int i = 0; i < collageDimension; i++){ //goes through the rows of pixels
- //                    for (int j = 0; j < collageDimension; j++){ //goes through the height of pixels
- //                             boolean topleft = (((i * tileDimension*collageDimension) + imagew) / collageDimension) >= collageRow * tileDimension;
- //                            boolean topright = (((j * tileDimension*collageDimension) + imageh) / collageDimension) >= collageCol * tileDimension;
- //                            boolean bottomleft = (((i * tileDimension*collageDimension) + imagew) / collageDimension)<= tileDimension + (collageRow * tileDimension);
- //                            boolean bottomright = (((j * tileDimension*collageDimension) + imageh) / collageDimension) <= tileDimension + (collageCol * tileDimension);
-
-
- //                            if ((topleft && topright && bottomright && bottomleft) == true) {
- //                                //System.out.println(" topleft is " + toplefti + " toprighti his " + toprighti + " botleft is " + bottomlefti + " botright is " + bottomrighti); 
-
-
- //                                int scalwt = ((i * tileDimension*collageDimension) + imagew) / collageDimension;
- //                                int scalht = ((j * tileDimension*collageDimension) + imageh) / collageDimension;
-
- //                                int color_scalew = (imagew * this.original.width()) / width; 
- //                                int color_scaleh = (imageh * this.original.height()) / height;  
-
- //                                Color color = addedimage.get(color_scaleh, color_scalew);
- //                                newimage.set(scalht, scalwt, color);
- //                                //System.out.println(" image w is " + imagew + " image his " + imageh + " scalewt is " + scalwt + " scaleht is " + scalht); 
- 
-
-                           
- //                            }
- //                    }
- //                }
- //            }
- //        }  
- //         this.collage = newimage; 
- //         showCollagePicture(); 
- //    }
-    // // WRITE YOUR CODE HERE
-    
-
-
-    // Test client 
     public static void main (String[] args) {
-        //ArtCollage art = new ArtCollage("Ariel.jpg");
-    //art.showCollagePicture();
-
-    // Creates a collage of 3x3 tiles. Each tile dimension is 200x200 pixels
-        // ArtCollage art = new ArtCollage("Ariel.jpg", 200, 3);
-        // art.makeCollage();
-        // art.greyscaleTile(2, 0);
-        //art.replaceTile("Flo.jpg",3,3);
-       // art.colorizeTile("green", 0, 1);
-        // Replace tile at col 1, row 1 with args[1] image
-        // art.replaceTile("Flo.jpg",0,0);
-        //art.showCollagePicture();
-
-        // ArtCollage testCollage = new ArtCollage("Ariel.jpg", 200, 3);
-        // testCollage.makeCollage();
-        // testCollage.replaceTile("Flo.jpg",2,1);
-        // testCollage.showCollagePicture();
-
-        //ArtCollage testCollage = new ArtCollage("Ariel.jpg");
-        //System.out.println(testCollage);
-       // ArtCollage testCollage2 = new ArtCollage("Ariel.jpg", 200, 3);
-        //System.out.println(testCollage2);
-        // ArtCollage testCollage3 = new ArtCollage("Ariel.jpg"); 
-        // testCollage3.replaceTile("Ariel.jpg", 10, 3);
-        // System.out.println(testCollage3);
-       
-        // int td = 100; 
-        // int cd = 3; 
-        // ArtCollage testCollage3 = new ArtCollage("Ariel.jpg", td, cd);
-        // testCollage3.original = new Picture("Flo.jpg"); 
-        // testCollage3.collage = new Picture("Flo.jpg"); 
-        //testCollage3.collage = new Picture(picDim, picDim); 
-        // 
-
-// ArtCollage art = new ArtCollage("Flo.jpg", 200, 3);
-// art.makeCollage();
-// //Colorize tile at col 2, row 2 to only show the red component
-//      art.colorizeTile("blue",0,1);
-//   art.showCollagePicture();
-
-//         ArtCollage art = new ArtCollage("Ariel.jpg", 200, 4);
-// art.makeCollage();
-// // Converts the tile at col 1, row 0 from color to greyscale
-// art.greyscaleTile(3, 3);
-
-
-    //  ArtCollage art = new ArtCollage("Ariel.jpg", 200, 2);
-    // art.makeCollage();
-    // //     // Replace 3 tiles 
-    // art.replaceTile("Flo.jpg",0,1);
-    //  art.replaceTile("Ariel.jpg",1,0);
-    //  art.replaceTile("Flo.jpg",1,1);
-    // art.colorizeTile("green",0,0);
-    //  art.showCollagePicture();
-
-
-// ArtCollage art = new ArtCollage("Flo.jpg");
-// art.makeCollage();
-// art.showCollagePicture();
     }
 }
